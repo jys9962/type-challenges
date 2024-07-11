@@ -28,7 +28,9 @@ export type MyParameters<T extends (...args: any[]) => any> =
 /* _____________ 테스트 케이스 _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
+// @ts-ignore
 function foo(arg1: string, arg2: number): void {}
+// @ts-ignore
 function bar(arg1: boolean, arg2: { a: 'A' }): void {}
 function baz(): void {}
 
