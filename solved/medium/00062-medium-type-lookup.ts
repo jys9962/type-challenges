@@ -34,7 +34,7 @@ type LookUp<U, T extends string> = {
 }[T]
 
 /* _____________ 테스트 케이스 _____________ */
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
 
 interface Cat {
   type: 'cat'
@@ -49,9 +49,8 @@ interface Dog {
 
 type Animal = Cat | Dog
 
-type Created = LookUp<Animal, 'dog'>;
 type cases = [
-  Expect<Equal<Created, Dog>>,
+  Expect<Equal<LookUp<Animal, 'dog'>, Dog>>,
   Expect<Equal<LookUp<Animal, 'cat'>, Cat>>,
 ]
 
